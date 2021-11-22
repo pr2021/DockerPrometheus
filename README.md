@@ -4,7 +4,7 @@ Step 2 : Access the Root Directory "pilzassesment" using command -  cd pilzasses
 
 Step 3 : Install docker relevant to operating system using the link https://docs.docker.com/get-docker/
 
-Step 4 : After installing Docker, please go to prometheus folder inside "pilzassesment folder" and open prometheus.yml and the file looks as shown below, please update the local machne IP address and save the file.
+Step 4 : After installing Docker, please go to prometheus folder inside "pilzassesment folder" and open prometheus.yml and the file looks as shown below, please update the local machine IP address and save the file.
 *****************************************
 global:
   scrape_interval: 30s
