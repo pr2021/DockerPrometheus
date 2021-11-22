@@ -26,4 +26,4 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets:
-          - '192.168.101.8:9113'                   
+          - 'yourlocalmachineipaddress:9113'                   
