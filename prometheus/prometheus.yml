@@ -1,0 +1,29 @@
+global:
+  scrape_interval: 30s
+  scrape_timeout: 10s
+
+alerting:
+  alertmanagers:
+    - scheme: http
+      static_configs:
+        - targets: [ 'alertmanager:9093' ]  
+
+rule_files:
+  - alert.yml
+
+scrape_configs:
+  - job_name: services
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'prometheus:9090'
+  - job_name: alertmanager
+    metrics_path: /metrics
+    static_configs:
+      - targets: 
+          - 'alertmanager:9093'
+  - job_name : nginxcontainer
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - '192.168.101.8:9113'                   

@@ -1,0 +1,10 @@
+groups:
+  - name: NginxContainer is DOWN
+    rules:
+      - alert: NginxDown
+        expr: up == 0
+        for: 5s
+        labels:
+          severity: Critical
+        annotations:
+          summary: "NginxContainer is Down!!! "
